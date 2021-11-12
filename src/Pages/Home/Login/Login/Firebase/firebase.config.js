@@ -1,9 +1,9 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDrHa-uL4EeAloZlMhjORhjFqwBTcwslzc",
-  authDomain: "doctor-porter.firebaseapp.com",
-  projectId: "doctor-porter",
-  storageBucket: "doctor-porter.appspot.com",
-  messagingSenderId: "487552246505",
-  appId: "1:487552246505:web:d639d0f9f51bbe489d4678",
+  apiKey: "AIzaSyDpV0WPjsbEfjzemXpii1B4sFIlp4ZH45k",
+  authDomain: "bike-point-7dc02.firebaseapp.com",
+  projectId: "bike-point-7dc02",
+  storageBucket: "bike-point-7dc02.appspot.com",
+  messagingSenderId: "304454545711",
+  appId: "1:304454545711:web:049d31aa38586c740cb1da",
 };
 export default firebaseConfig;

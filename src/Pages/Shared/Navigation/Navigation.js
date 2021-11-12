@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,8 +14,10 @@ import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import useAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
+  const { user, logout } = useAuth();
   const theme = useTheme();
   const useStyle = makeStyles({
     navItem: {
@@ -115,6 +117,26 @@ const Navigation = () => {
                 <Button color="inherit">About</Button>
               </Link>
             </Box>
+            {user?.email ? (
+              <Box>
+                <NavLink
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/dashboard"
+                >
+                  <Button color="inherit">Dashboard</Button>
+                </NavLink>
+                <Button onClick={logout} color="inherit">
+                  Logout
+                </Button>
+              </Box>
+            ) : (
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                to="/login"
+              >
+                <Button color="inherit">Login</Button>
+              </NavLink>
+            )}
           </Toolbar>
         </AppBar>
 
