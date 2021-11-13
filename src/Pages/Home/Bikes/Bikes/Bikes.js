@@ -11,7 +11,7 @@ const Bikes = () => {
           setBikes(data);
         });
     }, []);
-  console.log(bikes);
+ 
     return (
       <div>
         <div className="mt-4">

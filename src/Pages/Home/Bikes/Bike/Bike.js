@@ -1,9 +1,14 @@
+import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Booking from '../../../Booking/Booking/Booking';
 import './Bike.css'
 
-const Bike = (props) => {
-     const { name, img, _id, price, Details, rating } = props.bikes;
+const Bike = ({bikes}) => {
+    const { name, img, _id, price, Details, rating } = bikes;
+    const [openBooking, setBookingOpen] = React.useState(false);
+    const handleBookingOpen = () => setBookingOpen(true);
+    const handleBookingClose = () => setBookingOpen(false);
      const shorten = Details ? Details.substring(0, 70) : "";
     return (
       <div>
@@ -32,12 +37,20 @@ const Bike = (props) => {
               >
                 Details{" "}
               </Link>
-              <Link
-                className="text-center p-1 booking-button btn2 w-50"
-                to={`/bike/${_id}`}
-              >
-                Booking Now{" "}
-              </Link>
+              <Button variant="contained" onClick={handleBookingOpen}>
+                <Link
+                  className="text-center p-1 booking-button btn2 w-50"
+                  to={`/bike/${_id}`}
+                >
+                  Booking Now{" "}
+                </Link>
+              </Button>
+                        <Booking
+                            bikes={bikes}
+                openBooking={openBooking}
+                handleBookingClose={handleBookingClose}
+               
+              ></Booking>
             </div>
           </div>
         </div>
