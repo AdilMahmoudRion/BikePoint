@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -18,9 +18,57 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-const Booking = ({ openBooking, handleBookingClose, bikes }) => {
-    const { name, price, Details} = bikes;
-    const { user } = useAuth();
+const Booking = ({
+  openBooking,
+  handleBookingClose,
+  bikes,
+  setBookingSuccess,
+}) => {
+  const { name, price, Details } = bikes;
+  const { user } = useAuth();
+  const initialInfo = {
+    patientName: user.displayName,
+    email: user.email,
+    phone: "",
+  };
+  const [bookingInfo, setBookingInfo] = useState(initialInfo);
+
+  const handleOnBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newInfo = { ...bookingInfo };
+    newInfo[field] = value;
+    setBookingInfo(newInfo);
+  };
+
+  const handleBookingSubmit = (e) => {
+    // collect data
+      const appointment = {
+      name: user.displayName,
+      email: user.email,
+      bikeName: name,
+      price: price,
+    };
+      console.log(appointment);
+    // send to the server
+    fetch("http://localhost:5000/booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(appointment),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          setBookingSuccess(true);
+          handleBookingClose();
+        }
+      });
+
+    e.preventDefault();
+  };
+
   return (
     <Modal
       aria-labelledby="transition-modal-title"
@@ -36,20 +84,14 @@ const Booking = ({ openBooking, handleBookingClose, bikes }) => {
       <Fade in={openBooking}>
         <Box sx={style}>
           <Typography id="transition-modal-title" variant="h6" component="h2">
-            '{name}'
+            {name}
           </Typography>
-          <form>
+          <form onSubmit={handleBookingSubmit}>
             <TextField
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
-              defaultValue={Details}
-              size="small"
-            />
-            <TextField
-              sx={{ width: "90%", m: 1 }}
-              id="outlined-size-small"
-              name="patientName"
-              // onBlur={handleOnBlur}
+              name="userName"
+              onBlur={handleOnBlur}
               defaultValue={user.displayName}
               size="small"
             />
@@ -57,7 +99,7 @@ const Booking = ({ openBooking, handleBookingClose, bikes }) => {
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
               name="email"
-              //   onBlur={handleOnBlur}
+              onBlur={handleOnBlur}
               defaultValue={user.email}
               size="small"
             />
@@ -65,16 +107,17 @@ const Booking = ({ openBooking, handleBookingClose, bikes }) => {
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
               name="phone"
-              //   onBlur={handleOnBlur}
-              placeholder="Type your Phone Number"
+              onBlur={handleOnBlur}
+              defaultValue="Phone Number"
               size="small"
             />
             <TextField
               disabled
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
-              size="small"
+              price="price"
               defaultValue={price}
+              size="small"
             />
             <Button type="submit" variant="contained">
               Submit
