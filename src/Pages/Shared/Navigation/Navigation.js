@@ -18,6 +18,7 @@ import useAuth from "../../../hooks/useAuth";
 
 const Navigation = () => {
   const { user, logout } = useAuth();
+  
   const theme = useTheme();
   const useStyle = makeStyles({
     navItem: {
@@ -116,6 +117,9 @@ const Navigation = () => {
               <Link className={navItem} to="/about">
                 <Button color="inherit">About</Button>
               </Link>
+            </Box>
+            <Box>
+              <Typography>{user.displayName}</Typography>
             </Box>
             {user?.email ? (
               <Box>
