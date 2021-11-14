@@ -24,7 +24,7 @@ const Booking = ({
   bikes,
   setBookingSuccess,
 }) => {
-  const { name, price, Details } = bikes;
+  const { name, price} = bikes;
   const { user } = useAuth();
   const initialInfo = {
     patientName: user.displayName,
