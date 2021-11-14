@@ -7,7 +7,7 @@ const Bikes = () => {
   const [bikes, setBikes] = useState([]);
   const [bookingSuccess, setBookingSuccess] = useState(false);
     useEffect(() => {
-      fetch("http://localhost:5000/bikes")
+      fetch("https://safe-ocean-13118.herokuapp.com/bikes")
         .then((res) => res.json())
         .then((data) => {
           setBikes(data);
