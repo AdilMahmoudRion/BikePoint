@@ -1,18 +1,24 @@
-import Button from '@restart/ui/esm/Button';
-import React from 'react';
+import React, { useState } from 'react';
+import './Bike.css'
 import { Link } from 'react-router-dom';
 import Booking from '../../../Booking/Booking/Booking';
-import './Bike.css'
+import Button from '@restart/ui/esm/Button';
+import { Alert } from "@mui/material";
 
-const Bike = ({ bikes, setBookingSuccess }) => {
+
+const Bike = ({ bikes}) => {
   const { name, img, _id, price, Details, rating } = bikes;
   const [openBooking, setBookingOpen] = React.useState(false);
+   const [bookingSuccess, setBookingSuccess] = useState(false);
   const handleBookingOpen = () => setBookingOpen(true);
   const handleBookingClose = () => setBookingOpen(false);
   const shorten = Details ? Details.substring(0, 70) : "";
   return (
-    <div>
-      <div className="bike-information">
+    <div className="bike-information">
+      {bookingSuccess && (
+        <Alert severity="success">Appointment Booked successfully!</Alert>
+      )}
+      <div className="bike-sec">
         <div className="logo">
           <img className="bike-img" src={img} alt="" />
         </div>
