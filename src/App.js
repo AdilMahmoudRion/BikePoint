@@ -6,6 +6,7 @@ import Services from "./Pages/Home/Services/Services";
 import Navigation from "./Pages/Shared/Navigation/Navigation";
 import Login from "./Pages/Home/Login/Login/Login";
 import Register from "./Pages/Home/Login/Register/Register";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/register">
            <Register></Register>
+          </Route>
+          <Route path="/dashboard">
+          <Dashboard></Dashboard>
           </Route>
           <Route path="/">
             <Home />
