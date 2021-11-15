@@ -1,0 +1,51 @@
+.navbar {
+  background-color: #003580;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.nav-link {
+  border: 1px solid white;
+  margin-right: 10px;
+  padding: 5px;
+  color: white;
+  border-radius: 3px;
+}
+.nav-link:hover {
+  background-color: #044094;
+}
+a {
+  font-style: none;
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+.button {
+  background-color: #003580;
+  color: white;
+  border: 1px solid white;
+  padding: 5px;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #003580;
+  border-radius: 3px;
+}
+.img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.userInf {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
