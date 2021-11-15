@@ -22,10 +22,10 @@ const MakeAdmin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // if (data.modifiedCount) {
+                if (data.modifiedCount) {
                 console.log(data);
-                // setSuccess(true);
-                // }
+                setSuccess(true);
+                }
             })
 
         e.preventDefault()
