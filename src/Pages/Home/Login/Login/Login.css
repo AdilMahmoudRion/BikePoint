@@ -1,0 +1,82 @@
+.form-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact #contact-submit {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #003580;
+  color: #fff;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact #contact-submit:hover {
+  background: #044094;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact input:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+.signInUsingGoogle {
+  background-color: white;
+  border: 1px solid #003580;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+}
+.signInUsingGoogle:hover {
+  color: white;
+  background-color: #db4437;
+  transition: background-color 0.7s ease-in-out;
+}

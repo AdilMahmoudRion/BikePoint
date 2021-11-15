@@ -52,9 +52,9 @@ const Navigation = () => {
                     </button>
                   </div>
                 ) : (
-                  <button className="button" onClick={signInWithGoogle}>
-                    Login
-                  </button>
+                  <Link to="/login" className="nav-link text-white">
+                      Login
+                    </Link>
                 )}
               </Nav>
             </Navbar.Collapse>

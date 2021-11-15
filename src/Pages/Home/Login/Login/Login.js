@@ -1,7 +1,6 @@
-import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
+import { Button, CircularProgress, Alert } from '@mui/material';
 import React, { useState } from 'react';
-import { Grid } from '@mui/material';
-import login from '../../../Shared/Images/banner.jpg'
+import './Login.css'
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 
@@ -28,45 +27,76 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
-        <Container>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Login</Typography>
-                    <form onSubmit={handleLoginSubmit}>
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                                id="standard-basic"
-                                label="Your Email"
-                                name="email"
-                                onChange={handleOnChange}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password"
-                            onChange={handleOnChange}
-                            variant="standard" />
+        <div>
+         
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
-                        <NavLink
-                            style={{ textDecoration: 'none' }}
-                            to="/register">
-                            <Button variant="text">New User? Please Register</Button>
-                        </NavLink>
-                        {isLoading && <CircularProgress />}
-                        {user?.email && <Alert severity="success">Login successfully!</Alert>}
-                        {authError && <Alert severity="error">{authError}</Alert>}
-                    </form>
-                    <p>------------------------</p>
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: '100%' }} src={login} alt="" />
-                </Grid>
-            </Grid>
-        </Container>
+            <div>
+                <div className="body">
+                    <div className="form-container">
+                        <form id="contact" onSubmit={handleLoginSubmit}>
+                            <h3>Login Form</h3>
+                            <fieldest>
+                            {isLoading && <CircularProgress />}
+                            {user?.email && <Alert severity="success">Login successfully!</Alert>}
+                            {authError && <Alert severity="error">{authError}</Alert>}
+                            </fieldest>
+
+                            <fieldset>
+                                <input
+                                    label="Your Email"
+                                    name="email"
+                                    onChange={handleOnChange}
+                                    placeholder="Your Email Address"
+                                    type="email"
+                                    tabindex="2"
+                                    required
+                                />
+                            </fieldset>
+
+                            <fieldset>
+                                <input
+                                    id="standard-basic"
+                                    label="Your Password"
+                                    type="password"
+                                    name="password"
+                                    onChange={handleOnChange}
+                                    tabindex="4"
+                                    required
+                                />
+                            </fieldset>
+
+                            <fieldset>
+                                <button
+                                    name="submit"
+                                    type="submit"
+                                    id="contact-submit"
+                                    data-submit="...Sending"
+                                >
+                                    Submit
+                                </button>
+                            </fieldset>
+                            <fieldset>
+                                <NavLink
+                                    style={{ textDecoration: 'none' }}
+                                    to="/register">
+                                    <Button variant="text">New User? Please Register</Button>
+                                </NavLink>
+                            </fieldset>
+                            <fieldset>
+                                <button
+                                    name="submit"
+                                    type="submit"
+                                    className="signInUsingGoogle"
+                                    onClick={signInWithGoogle}
+                                >
+                                    Sign With Google
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 

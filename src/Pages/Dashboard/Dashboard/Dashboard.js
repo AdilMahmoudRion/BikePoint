@@ -1,4 +1,5 @@
 import React from "react";
+import './Dashboard.css'
 import clsx from "clsx";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
@@ -145,37 +146,27 @@ const Dashboard = () => {
           </div>
           <Divider />
           <List>
-            <Link to="/home">
-              <Button color="inherit">Back To Home</Button>
+            <Link className="btn" to="/home">
+              Back To home
             </Link>
             <Divider />
-            <Link to={`${url}`}>
-              <Button color="inherit">Dashboard</Button>
+            <Link className="btn" to={`${url}`}>
+            Dashboard
             </Link>
             <Divider />
             {admin && (
               <Box>
-                <Link to={`${url}/makeAdmin`}>
-                  <Button color="inherit">Make Admin</Button>
+                <Link className="btn" to={`${url}/makeAdmin`}>
+              Make Admin
                 </Link>
                 <Divider />
-                <Link to={`${url}/addBike`}>
-                  <Button color="inherit">Control order</Button>
+                <Link className="btn" to={`${url}/addBike`}>
+                  Control order
                 </Link>
               </Box>
             )}
           </List>
-          <List>
-            {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
+          
         </Drawer>
         <main
           className={clsx(classes.content, {
