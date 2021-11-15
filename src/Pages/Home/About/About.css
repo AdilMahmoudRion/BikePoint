@@ -31,9 +31,15 @@
   font-size: 500%;
   color: #dc3546f8;
 }
+.banner-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 .banner-text p {
   color: darkgrey;
 }
 .power {
   display: flex;
+  justify-content: center;
 }

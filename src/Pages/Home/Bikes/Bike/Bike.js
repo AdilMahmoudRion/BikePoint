@@ -16,7 +16,7 @@ const Bike = ({ bikes}) => {
   return (
     <div className="bike-information">
       {bookingSuccess && (
-        <Alert severity="success">Appointment Booked successfully!</Alert>
+        <Alert severity="success">booking successfully!</Alert>
       )}
       <div className="bike-sec">
         <div className="logo">
@@ -43,14 +43,15 @@ const Bike = ({ bikes}) => {
             >
               Details{" "}
             </Link>
-            <Button variant="contained" onClick={handleBookingOpen}>
+       
               <Link
                 className="text-center p-1 booking-button btn2 w-50"
+                onClick={handleBookingOpen}
                 to={`/bike/${_id}`}
               >
                 Booking Now{" "}
               </Link>
-            </Button>
+        
             <Booking
               bikes={bikes}
               openBooking={openBooking}

@@ -15,11 +15,11 @@ const Bikes = () => {
  
     return (
       <div>
-        <div className="mt-4">
+        <div className="mt-5 mb-5">
           <div className="text-center">
-            <h1>Find the perfect hotel on Booking.com</h1>
+            <h1>Find the perfect Bike on Bike point</h1>
             <p className="text-muted">
-              From budget hotels to luxury rooms and everything in between
+            Find the Best Motorbike
             </p>
             
           </div>

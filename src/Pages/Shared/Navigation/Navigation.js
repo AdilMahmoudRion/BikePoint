@@ -16,7 +16,7 @@ const Navigation = () => {
         <Navbar className="navbar" sticky="top" collapseOnSelect expand="lg">
           <Container className="">
             <Navbar.Brand className="fs-3 fw-bolder text-white" href="/home">
-              Booking.com
+              Bike Point
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse
