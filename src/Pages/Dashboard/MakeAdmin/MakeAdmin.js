@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = e => {
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://safe-ocean-13118.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 // 'authorization': `Bearer ${token}`,
@@ -43,7 +43,7 @@ const MakeAdmin = () => {
                         variant="standard" />
                     <Button type="submit" variant="contained">Make Admin</Button>
                 </form>
-                {success && <Alert severity="success">Made Admin successfully!</Alert>}
+                {success && <Alert severity="success">Make Admin successfully!</Alert>}
             </div>
         </div>
     );

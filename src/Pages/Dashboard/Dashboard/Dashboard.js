@@ -19,11 +19,13 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import useAuth from "../../../hooks/useAuth";
 import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
-import { Button } from '@mui/material';
+import { Button } from "@mui/material";
 import BookingItem from "../BookingItem/BookingItem";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import BookingList from "../BookingList/BookingList";
 import AddBike from "../AddBike/AddBike";
+import { Box } from "@mui/system";
+import AdminRoute from "../../Home/Login/AdminRoute/AdminRoute";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -84,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Dashboard = () => {
-  const { user } = useAuth();
+  const { user, admin } = useAuth();
   let { path, url } = useRouteMatch();
   const classes = useStyles();
   const theme = useTheme();
@@ -151,13 +153,17 @@ const Dashboard = () => {
               <Button color="inherit">Dashboard</Button>
             </Link>
             <Divider />
-            <Link to={`${url}/makeAdmin`}>
-              <Button color="inherit">Make Admin</Button>
-            </Link>
-            <Divider />
-            <Link to={`${url}/addBike`}>
-              <Button color="inherit">Add Your Bike</Button>
-            </Link>
+            {admin && (
+              <Box>
+                <Link to={`${url}/makeAdmin`}>
+                  <Button color="inherit">Make Admin</Button>
+                </Link>
+                <Divider />
+                <Link to={`${url}/addBike`}>
+                  <Button color="inherit">Control order</Button>
+                </Link>
+              </Box>
+            )}
           </List>
           <List>
             {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
@@ -178,19 +184,17 @@ const Dashboard = () => {
         >
           <div className={classes.drawerHeader} />
           <Switch>
-                    <Route exact path={path}>
-                        <BookingList></BookingList>
-                    </Route>
-                    <Route path={`${path}/makeAdmin`}>
-                        <MakeAdmin></MakeAdmin>
-                    </Route>
-                    <Route path={`${path}/addBike`}>
-                        <AddBike></AddBike>
-                    </Route>
-                    {/* <AdminRoute path={`${path}/addDoctor`}>
-                        <AddDoctor></AddDoctor>
-                    </AdminRoute> */}
-                </Switch>
+            <Route exact path={path}>
+              <BookingList></BookingList>
+            </Route>
+            <AdminRoute path={`${path}/makeAdmin`}>
+              <MakeAdmin></MakeAdmin>
+            </AdminRoute>
+            <AdminRoute path={`${path}/addBike`}>
+              <AddBike></AddBike>
+            </AdminRoute>
+            
+          </Switch>
         </main>
       </div>
     </div>
