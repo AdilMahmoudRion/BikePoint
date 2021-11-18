@@ -33,7 +33,9 @@ const BookingPage = () => {
                     <h1>{price}</h1>
                 </div>
               <div className="mt-3">
-              <Link className="buy-now">
+              <Link 
+              to="/about"
+              className="buy-now">
                 Buy now
                 
                 </Link>

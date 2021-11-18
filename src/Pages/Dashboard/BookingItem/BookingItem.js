@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const BookingItem = ({bikeName, price,byreName,email}) => {
+const BookingItem = (props) => {
+
+const {bikeName,email,price,_id}=props.bookingItem;
+
     return (
         <div>
-            <h1>{bikeName}</h1>
+            <div>
+                <h1>{bikeName}</h1>
+                <p>{email}</p>
+                <h3>{price}</h3>
+            </div>
         </div>
     );
 };

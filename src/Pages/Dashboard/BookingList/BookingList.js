@@ -12,7 +12,6 @@ const BookingList = () => {
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, [user.email]);
-  console.log(booking);
   return (
     <div>
       <h1>booking list{booking.length}</h1>
@@ -23,10 +22,7 @@ const BookingList = () => {
           <BookingItem
             // eslint-disable-next-line no-undef
             Key={booking._id}
-            bikeName={booking.bikeName}
-            price={booking.price}
-            byreName={booking.Name}
-            email={booking.email}
+            bookingItem={booking}
 
           ></BookingItem>
         );

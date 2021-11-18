@@ -88,6 +88,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Dashboard = () => {
   const { user, admin } = useAuth();
+  console.log(admin);
   let { path, url } = useRouteMatch();
   const classes = useStyles();
   const theme = useTheme();

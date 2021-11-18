@@ -1,7 +1,7 @@
 import { Button, CircularProgress, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import './Login.css'
-import { NavLink, useLocation, useHistory } from 'react-router-dom';
+import { NavLink, useLocation, useHistory, Link } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 
 const Login = () => {
@@ -76,11 +76,11 @@ const Login = () => {
                                 </button>
                             </fieldset>
                             <fieldset>
-                                <NavLink
+                                <Link className="link-text"
                                     style={{ textDecoration: 'none' }}
                                     to="/register">
-                                    <Button variant="text">New User? Please Register</Button>
-                                </NavLink>
+                                   New User? Please Register
+                                </Link>
                             </fieldset>
                             <fieldset>
                                 <button

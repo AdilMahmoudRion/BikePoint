@@ -40,7 +40,7 @@ const Bike = ({ bikes}) => {
        
               <Link
                 className="text-center p-1 booking-button btn2 w-100"
-                // onClick={handleBookingOpen}
+                onClick={handleBookingOpen}
                 to={`/bookingPage/${_id}`}
               >
                 Booking Now{" "}
