@@ -1,4 +1,4 @@
-# Find your next stay
+# Find your bike
 
 Search deals on hotels, homes, and much more...
 
