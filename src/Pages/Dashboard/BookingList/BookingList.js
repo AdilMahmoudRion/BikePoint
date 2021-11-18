@@ -6,7 +6,7 @@ const BookingList = () => {
   const { user } = useAuth();
   const [booking, setBooking]= useState([]);
   useEffect(() => {
-    const url = `https://safe-ocean-13118.herokuapp.com/booking?email=${user.email}`;
+    const url = `http://localhost:5000/booking?email=${user.email}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())

@@ -6,12 +6,13 @@ const Bikes = () => {
   const [bikes, setBikes] = useState([]);
  
     useEffect(() => {
-      fetch("https://safe-ocean-13118.herokuapp.com/bikes")
+      fetch("http://localhost:5000/bikes")
         .then((res) => res.json())
         .then((data) => {
           setBikes(data);
         });
     }, []);
+
  
     return (
       <div>

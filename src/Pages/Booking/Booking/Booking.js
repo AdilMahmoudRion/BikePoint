@@ -51,7 +51,7 @@ const Booking = ({
     };
       console.log(appointment);
     // send to the server
-    fetch("https://safe-ocean-13118.herokuapp.com/booking", {
+    fetch("http://localhost:5000/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

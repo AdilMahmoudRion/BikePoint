@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Bike.css'
 import { Link } from 'react-router-dom';
 import Booking from '../../../Booking/Booking/Booking';
-import Button from '@restart/ui/esm/Button';
 import { Alert } from "@mui/material";
 
 
@@ -37,17 +36,12 @@ const Bike = ({ bikes}) => {
             <strong className="rate">BDT {price}</strong>
           </h4>
           <div className="cnf-button">
-            <Link
-              className="p-1 text-center booking-button btn1 w-50"
-              to={`/bike/${_id}`}
-            >
-              Details{" "}
-            </Link>
+          
        
               <Link
-                className="text-center p-1 booking-button btn2 w-50"
-                onClick={handleBookingOpen}
-                to={`/bike/${_id}`}
+                className="text-center p-1 booking-button btn2 w-100"
+                // onClick={handleBookingOpen}
+                to={`/bookingPage/${_id}`}
               >
                 Booking Now{" "}
               </Link>

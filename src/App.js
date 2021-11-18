@@ -7,6 +7,8 @@ import Navigation from "./Pages/Shared/Navigation/Navigation";
 import Login from "./Pages/Home/Login/Login/Login";
 import Register from "./Pages/Home/Login/Register/Register";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import PrivateRoute from "./Pages/Home/Login/PrivateRoute/PrivateRoute";
+import BookingPage from "./Pages/Booking/BookingPage/BookingPage";
 
 
 function App() {
@@ -30,6 +32,9 @@ function App() {
           <Route path="/register">
            <Register></Register>
           </Route>
+          <PrivateRoute path="/bookingPage/:bookingId">
+              <BookingPage></BookingPage>
+            </PrivateRoute>
           <Route path="/dashboard">
           <Dashboard></Dashboard>
           </Route>
