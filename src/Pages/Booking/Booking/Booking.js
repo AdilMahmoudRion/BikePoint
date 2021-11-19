@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Booking.css'
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -12,10 +13,9 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
+  width: 700,
   border: "2px solid #000",
-  boxShadow: 24,
+  boxShadow: 50,
   p: 4,
 };
 const Booking = ({
@@ -82,8 +82,8 @@ const Booking = ({
       }}
     >
       <Fade in={openBooking}>
-        <Box sx={style}>
-          <Typography id="transition-modal-title" variant="h6" component="h2">
+        <Box sx={style} className="box-style">
+          <Typography className="confirmation-hed" id="transition-modal-title" variant="h6" component="h2">
             {name}
           </Typography>
           <form onSubmit={handleBookingSubmit}>
@@ -91,6 +91,7 @@ const Booking = ({
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
               name="userName"
+              label="Name"
               onBlur={handleOnBlur}
               defaultValue={user.displayName}
               size="small"
@@ -99,27 +100,31 @@ const Booking = ({
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
               name="email"
+              label="Email Address"
               onBlur={handleOnBlur}
               defaultValue={user.email}
               size="small"
             />
             <TextField
-              sx={{ width: "90%", m: 1 }}
+            
+              sx={{ width: "90%", m: 1,  color:"secondary"  }}
               id="outlined-size-small"
               name="phone"
+              label="Phone Number"
               onBlur={handleOnBlur}
-              defaultValue="Phone Number"
+              defaultValue="+880"
               size="small"
             />
             <TextField
               disabled
               sx={{ width: "90%", m: 1 }}
               id="outlined-size-small"
+              label="Price"
               price="price"
               defaultValue={price}
               size="small"
             />
-            <Button type="submit" variant="contained">
+            <Button className="sub-btn" type="submit">
               Submit
             </Button>
           </form>
