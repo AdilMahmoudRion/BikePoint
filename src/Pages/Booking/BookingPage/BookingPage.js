@@ -47,7 +47,7 @@ const BookingPage = () => {
               <button 
                onClick={handleBookingOpen}
               className="buy-now-btn">
-                BUY NOW
+                BOOKING NOW
                 
                 </button>
                 <Link 

@@ -27,6 +27,7 @@ import BookingList from "../BookingList/BookingList";
 import AddBike from "../AddBike/AddBike";
 import { Box } from "@mui/system";
 import AdminRoute from "../../Home/Login/AdminRoute/AdminRoute";
+import ControlOrder from "../ControlOrder/ControlOrder";
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -88,7 +89,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Dashboard = () => {
   const { user, admin } = useAuth();
-  console.log(admin);
   let { path, url } = useRouteMatch();
   const classes = useStyles();
   const theme = useTheme();
@@ -162,6 +162,9 @@ const Dashboard = () => {
                 </Link>
                 <Divider />
                 <Link className="btn" to={`${url}/addBike`}>
+                 add bike
+                </Link>
+                <Link className="btn" to={`${url}/controlOrder`}>
                   Control order
                 </Link>
               </Box>
@@ -184,6 +187,9 @@ const Dashboard = () => {
             </AdminRoute>
             <AdminRoute path={`${path}/addBike`}>
               <AddBike></AddBike>
+            </AdminRoute>
+            <AdminRoute path={`${path}/controlOrder`}>
+              <ControlOrder></ControlOrder>
             </AdminRoute>
             
           </Switch>
