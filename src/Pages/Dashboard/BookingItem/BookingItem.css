@@ -1,0 +1,26 @@
+.booking-item-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgb(248, 248, 250);
+  border-radius: 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 2px 4px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+    0 2px 4px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07);
+}
+.details-heading {
+  width: 72%;
+  border-right: 1px solid gray;
+}
+.order-status {
+  width: 28%;
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
