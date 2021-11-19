@@ -13,7 +13,6 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 700,
   border: "2px solid #000",
   boxShadow: 50,
   p: 4,
@@ -86,9 +85,12 @@ const Booking = ({
           <Typography className="confirmation-hed" id="transition-modal-title" variant="h6" component="h2">
             {name}
           </Typography>
-          <form onSubmit={handleBookingSubmit}>
+          <form className="booking-from" onSubmit={handleBookingSubmit}>
             <TextField
-              sx={{ width: "90%", m: 1 }}
+           
+             variant="standard"
+             color="warning"
+              sx={{ width: "96%", m: 1 }}
               id="outlined-size-small"
               name="userName"
               label="Name"
@@ -97,7 +99,9 @@ const Booking = ({
               size="small"
             />
             <TextField
-              sx={{ width: "90%", m: 1 }}
+             variant="standard"
+             color="warning"
+              sx={{ width: "96%", m: 1 }}
               id="outlined-size-small"
               name="email"
               label="Email Address"
@@ -106,18 +110,21 @@ const Booking = ({
               size="small"
             />
             <TextField
-            
-              sx={{ width: "90%", m: 1,  color:"secondary"  }}
+             variant="standard"
+             color="warning"
+              sx={{ width: "96%", m: 1 }}
               id="outlined-size-small"
               name="phone"
               label="Phone Number"
               onBlur={handleOnBlur}
-              defaultValue="+880"
+              defaultValue="+8801"
               size="small"
             />
             <TextField
+             variant="standard"
+             color="warning"
               disabled
-              sx={{ width: "90%", m: 1 }}
+              sx={{ width: "96%", m: 1}}
               id="outlined-size-small"
               label="Price"
               price="price"
