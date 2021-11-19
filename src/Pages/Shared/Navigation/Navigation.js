@@ -28,7 +28,7 @@ const Navigation = () => {
                   Home
                 </Link>
                 <Link className="nav-link text-white" to="/services">
-                  Services
+                  Explore More
                 </Link>
                 <Link className="nav-link text-white" to="/about">
                   About
