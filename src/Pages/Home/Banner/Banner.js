@@ -21,7 +21,7 @@ const Banner = () => {
           </div>
        
          <div className="p-2">
-         <Link className="banner-btn" to="/">Learn More</Link>
+         <Link to="/services" className="banner-btn">Learn More</Link>
          </div>
         
         </div>

@@ -1,0 +1,13 @@
+.footer-section {
+  min-height: 280px;
+  width: 100%;
+  background-color: #0b0d17;
+}
+.contact-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+.custom-reaio {
+  --bs-aspect-ratio: 65%;
+}

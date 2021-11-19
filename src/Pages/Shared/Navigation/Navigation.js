@@ -6,7 +6,7 @@ import useAuth from "../../../hooks/useAuth";
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
-  const { signInWithGoogle, user, logout } = useAuth();
+  const { user, logout } = useAuth();
   const imgUrl = user.photoURL;
   console.log(imgUrl)
   return (
