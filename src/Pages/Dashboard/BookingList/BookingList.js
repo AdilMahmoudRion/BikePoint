@@ -33,7 +33,7 @@ const BookingList = () => {
         </div>
       </div>
       <div className="review-section">
-        <h1>review section</h1>
+        <h1 className="review-header">Review section</h1>
       </div>
       </div>
 
