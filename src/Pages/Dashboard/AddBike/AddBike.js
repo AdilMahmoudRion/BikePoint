@@ -1,5 +1,5 @@
-import React from "react";
 import axios from "axios";
+import React from "react";
 import { useForm } from "react-hook-form";
 import "./AddBike.css";
 
@@ -20,10 +20,10 @@ const AddBike = () => {
     });
   };
   return (
-    <div>
-      <h1>Add Nike</h1>
-      <div className="w-50 hotel-added">
-        <h1 className="text-center">Please Add a Service</h1>
+    <div className="container added-bike">
+
+      <div className="w-50 bike-added">
+        <h1 className="text-center p-4">Please Add a New Bike</h1>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Type Bike Name"
@@ -38,7 +38,7 @@ const AddBike = () => {
             <p className="text-muted">Rating required Out of 10.</p>
           )}
           <input
-            placeholder="engine
+            placeholder="Engine
             "
             {...register("engine", { min: 1, max: 10 }, { required: true })}
           />
@@ -50,12 +50,13 @@ const AddBike = () => {
           />
           {errors.rate && <p>Rate required.</p>}
           <input
-            placeholder="insert bike image link"
+            placeholder="Insert bike image link"
             {...register("img", { required: true })}
           />
           {errors.img && <p>bike image is required.</p>}
           <textarea
-            placeholder="Type Bike details specific"
+          className="textarea"
+            placeholder="Type Bike specific details "
             {...register("Details")}
           />
           {errors.Details && <p>Bike Info Required</p>}
