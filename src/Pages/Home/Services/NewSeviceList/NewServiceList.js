@@ -4,8 +4,8 @@ import './NewServiceList.css';
 
 const NewServiceList = ({bikes}) => {
     const { name, img, _id, price, Details, rating } = bikes;
-  
-    const shorten = Details ? Details.substring(0, 70) : "";
+    const shortName = name ? name.substring(0, 15) : "";
+    const shorten = Details ? Details.substring(0, 55) : "";
     return (
       <div className="bike-information">
         
@@ -15,7 +15,7 @@ const NewServiceList = ({bikes}) => {
           </div>
           <div className="bike-details">
             <div className="bike-name">
-              <h5>{name}</h5>
+              <h5>{shortName}</h5>
               <div>
                 <p className="reviews">
                   reviews <span className="span-tag">{rating}</span>
