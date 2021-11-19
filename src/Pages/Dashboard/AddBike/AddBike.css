@@ -1,0 +1,23 @@
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form input,
+textarea {
+  width: 70%;
+  margin-bottom: 20px;
+}
+.hotel-section {
+  display: flex;
+}
+.hotel-list {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-right: 10px;
+}
+.hotel-added {
+  border: 1px solid gray;
+  padding: 10px;
+}

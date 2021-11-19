@@ -24,7 +24,7 @@ const Bike = ({ bikes}) => {
               </p>
             </div>
           </div>
-          <p>Address: {shorten}...</p>
+          <p>{shorten}...</p>
           <h4>
             <span className="text-muted">From: </span>
             <strong className="rate">BDT {price}</strong>
