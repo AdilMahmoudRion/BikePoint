@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import './BookingPage.css'
-import { useParams } from 'react-router';
-import { Link, NavLink } from 'react-router-dom';
-import Booking from '../Booking/Booking';
 import { Alert } from '@mui/material';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
+import Booking from '../Booking/Booking';
+import './BookingPage.css';
 
 const BookingPage = () => {
     
@@ -18,7 +18,7 @@ const BookingPage = () => {
   const handleBookingClose = () => setBookingOpen(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/bookingPage/${bookingId}`)
+    fetch(`https://rocky-springs-46684.herokuapp.com/bookingPage/${bookingId}`)
       .then((res) => res.json())
       .then((data) => {
         setBooking(data);

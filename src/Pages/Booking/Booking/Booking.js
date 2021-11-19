@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import './Booking.css'
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
-import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import Fade from "@mui/material/Fade";
+import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
+import React, { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
+import './Booking.css';
 const style = {
   position: "absolute",
   top: "50%",
@@ -50,7 +50,7 @@ const Booking = ({
     };
       console.log(appointment);
     // send to the server
-    fetch("http://localhost:5000/booking", {
+    fetch("https://rocky-springs-46684.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",

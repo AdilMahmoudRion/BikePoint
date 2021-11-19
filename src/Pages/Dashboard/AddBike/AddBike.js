@@ -12,7 +12,7 @@ const AddBike = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/addBike", data).then((res) => {
+    axios.post("https://rocky-springs-46684.herokuapp.com/addBike", data).then((res) => {
       if (res.data.insertedId) {
         alert("added successfully");
         reset();
