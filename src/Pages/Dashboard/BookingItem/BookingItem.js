@@ -14,7 +14,7 @@ const {bikeName,email,price,_id}=props.bookingItem;
                 <h6>Current Price: {price}</h6>
                 </div>
                 <div className="order-status">
-                    <h3 className="order-status-section">Order Status</h3>
+                    <h4 className="order-status-section">Order Status</h4>
                     <div className="mt-3">
                         <p>Pending</p>
                     </div>
