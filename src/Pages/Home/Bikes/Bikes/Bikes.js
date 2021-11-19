@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './Bikes.css'
 import Bike from '../Bike/Bike';
+import './Bikes.css';
 
 const Bikes = () => {
   const [bikes, setBikes] = useState([]);
  
     useEffect(() => {
-      fetch("http://localhost:5000/bikes")
+      fetch("https://rocky-springs-46684.herokuapp.com/bikes")
         .then((res) => res.json())
         .then((data) => {
           setBikes(data);
