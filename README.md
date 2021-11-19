@@ -8,10 +8,6 @@ Live site link: [bike point](https://booking-dotcom.web.app/home).
 
 With Booking.com
 
-You're eligible for a Genius discount at Radisson Blu Royal Garden Hotel, Trondheim! To save at this property, all you have to do is sign in.
-
-Radisson Blu Royal Garden Hotel is beautifully located beside the Nidelva River, 8 minutes' walk from Torvet Square. It offers modern rooms with a flat-screen, satellite TV. WiFi is free.
-
 Renovated in 2014, all rooms at Royal Garden feature typically Nordic décor, a mini-bar and trouser press. Most rooms have parquet floors.
 
 Fresh, local produce is used in lunches and dinners at 73 Bar & Restaurant. Breakfast is served daily at the Bakkus Restaurant.
