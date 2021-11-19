@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import './Bikes.css'
-import Bike from '../Bike/Bike';
+import NewServiceList from '../NewSeviceList/NewServiceList';
+import './NewService.css';
 
-const Bikes = () => {
-  const [bikes, setBikes] = useState([]);
+
+
+
+const NewService = () => {
+
+    const [bikes, setBikes] = useState([]);
  
     useEffect(() => {
-      fetch("http://localhost:5000/bikes")
+      fetch("http://localhost:5000/bikes/all")
         .then((res) => res.json())
         .then((data) => {
           setBikes(data);
         });
     }, []);
+console.log(bikes);
 
- 
     return (
-      <div>
-        <div className="mt-5 mb-5">
+        <div>
+             <div className="mt-5 mb-5">
           <div className="text-center">
             <h1>Find the perfect Bike on Bike point</h1>
             <p className="text-muted">
@@ -27,16 +31,16 @@ const Bikes = () => {
           <div>
             <div className="bikes container">
               {bikes.map((bikes) => (
-                <Bike
+                <NewServiceList
                   key={bikes._id}
                   bikes={bikes}
-                ></Bike>
+                ></NewServiceList>
               ))}
             </div>
           </div>
         </div>
-      </div>
+        </div>
     );
 };
 
-export default Bikes;
+export default NewService;
