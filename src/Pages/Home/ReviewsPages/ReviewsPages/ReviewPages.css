@@ -1,0 +1,12 @@
+.bike-review-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .bike-review-section {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 5px 5px;
+  }
+}
