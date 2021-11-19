@@ -55,7 +55,6 @@
 }
 
 .btn2 {
-  margin-left: 4px;
   background-color: #dc3546af;
 }
 .rate {
@@ -76,6 +75,10 @@
     margin: 20px;
     padding: 10px;
   }
+  .bike-sec {
+    display: flex;
+    flex-direction: column;
+  }
   .logo {
     width: 100%;
   }
@@ -86,8 +89,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  .btn1 {
-    width: 50%%;
-    background-color: #a435f0;
+  .btn2 {
+    margin: 0px;
   }
 }

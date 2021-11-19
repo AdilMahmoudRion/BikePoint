@@ -1,11 +1,16 @@
 .service-sec {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn6UYjKHsqZI57tNrGYkh7NMVdNnkLUA0fODAtg3q4jyWF8f2wuii6oHifWURvSrw2uwE&usqp=CAU");
-  padding: 70px 0;
+  padding: 60px 0;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   background-position-y: 35%;
+}
+.service-header {
+  text-align: center;
+  color: white;
 }
 .service-item-sec {
   display: grid;
@@ -18,8 +23,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px;
-  width: 200px;
   width: 240px;
+  height: 260px;
   color: #dc3546f8;
 
   background: rgb(248, 248, 250);
@@ -40,4 +45,16 @@
   width: 100%;
   width: 80%;
   padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .service-item-sec {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .service-item {
+    width: 100%;
+    height: fit-content;
+  }
 }
