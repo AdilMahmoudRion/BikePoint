@@ -14,8 +14,29 @@
   border-radius: 10px;
   height: 70vh;
 }
-.buy-now {
-  width: 100%;
+.buy-now-btn {
+  font-weight: bold;
+  font-size: 20px;
+  width: 50%;
+  border: none;
+  color: white;
   background-color: tomato;
   padding: 5px 30px;
+  border-radius: 3px;
+}
+.btn-grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.back-btn {
+  color: white;
+  border: 1px solid white;
+  background-color: rgb(197, 71, 255);
+  padding: 5px 14%;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 20px;
 }

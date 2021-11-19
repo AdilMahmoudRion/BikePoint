@@ -33,7 +33,7 @@ const Bike = ({ bikes}) => {
           
        
               <Link
-                className="text-center p-1 booking-button btn2 w-100"
+                className="text-center p-1 booking-button btn2"
                 to={`/bookingPage/${_id}`}
               >
                 Booking Now{" "}

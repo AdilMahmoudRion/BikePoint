@@ -37,6 +37,7 @@
   justify-content: space-between;
 }
 .booking-button {
+  width: 100%;
   color: white;
   border: 1px solid white;
   padding: 5px;

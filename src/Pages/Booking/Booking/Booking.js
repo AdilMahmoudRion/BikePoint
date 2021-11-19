@@ -131,7 +131,7 @@ const Booking = ({
               defaultValue={price}
               size="small"
             />
-            <Button className="sub-btn" type="submit">
+            <Button variant="contained"className="sub-btn" type="submit">
               Submit
             </Button>
           </form>

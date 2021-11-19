@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './BookingPage.css'
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Booking from '../Booking/Booking';
 import { Alert } from '@mui/material';
 
@@ -28,10 +28,11 @@ const BookingPage = () => {
     console.log(booking.name);
     return (
         <div>
-           {bookingSuccess && (
+          
+            <div className="container booking-section">
+               {bookingSuccess && (
         <Alert severity="success">booking successfully!</Alert>
       )}
-            <div className="container booking-section">
                 <div>
                     <img className="booking-image" src={img} alt="" />
                 </div>
@@ -42,17 +43,17 @@ const BookingPage = () => {
                     <h5>{rating}</h5>
                     <h1>{price}</h1>
                 </div>
-              <div className="mt-3">
+              <div className="mt-3 btn-grp">
               <button 
                onClick={handleBookingOpen}
-              className="buy-now">
-                Buy now
+              className="buy-now-btn">
+                BUY NOW
                 
                 </button>
-                <Link
+                <Link 
                 to="/home"
-                 className="buy-now ms-1">
-                Back To Home
+                 className="back-btn ms-1">
+                BACK TO HOME
                 
                 </Link>
                 <Booking
