@@ -6,7 +6,7 @@ Live site link: [bike point](https://booking-dotcom.web.app/home).
 
 ## Plan Your Trip
 
-With Booking.com
+With Booking
 
 Renovated in 2014, all rooms at Royal Garden feature typically Nordic décor, a mini-bar and trouser press. Most rooms have parquet floors.
 
