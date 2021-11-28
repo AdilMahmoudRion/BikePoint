@@ -2,6 +2,10 @@
 
 Live site link: [bike point](https://booking-dotcom.web.app/home).
 
+- Implemented Admin Management Page.
+- Dynamic Routes With react Router Dom.
+- Nested routing in admin Dashboard.
+
 ## Design Lineage
 
 Sharper aggressive eyes. Muscular tank. Aerodynamic front. Edgy tail. The New R15 lives up to it’s legacy of challenging spirits boldly. Take a ride and discover what makes the R Badge the “Next-Generation 155cc Supersport Inheriting R-DNA”.
